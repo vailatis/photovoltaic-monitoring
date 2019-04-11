@@ -44,4 +44,4 @@ In this implementation, since i had room, i connected to the Raspberry a DS18B20
 - execute the "_MySQL_CreateDatabase.sql_" script to create databaes, tables, view and procedures
 - create on MySQL the account and give "_GRANT ALL_" trole to schema "_solar_" you just created
 - go under "_webroot/_library_" and edit the file "_\_config.php_" in order to provide credentials for MySQL database and OpenWeather
-- if everythinggone without errors, connecting with a browser to your webserver, should display the Solar website
+- if everything gone without errors, connecting with a browser to your webserver, should display the Solar website
