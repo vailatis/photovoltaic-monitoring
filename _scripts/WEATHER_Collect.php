@@ -6,10 +6,6 @@
 // Include core configuration modules
 require("/var/www/_library/_config.php");
 
-// Yahoo Location ID to retreive data for
-$OPENWEATHER_LOCATIONID = "put here your OpenWeather location ID";
-$OPENWEATHER_APIKEY = "put here your OpenWeather API key code";
-
 // Yahoo API constants and query strings
 $OPENWEATHER_APIURL = "http://api.openweathermap.org/data/2.5/weather?id=".$OPENWEATHER_LOCATIONID."&units=metric&lang=it&appid=".$OPENWEATHER_APIKEY;
 
