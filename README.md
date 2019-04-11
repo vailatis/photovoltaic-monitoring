@@ -18,3 +18,24 @@ All the above components can be hosted inside a single machine, if there is room
 My implementation is divided in two separated objects, since i already have server hosting a MySQL DB and an Apache web server, i used this machine for Database and Web frontend, and built-up a Raspberry Mini W (with wifi connectivity) for the Datacollector, directly mounted near the inverter inside a plastic enclosure.
 
 In this implementation, since i had room, i connected to the Raspberry a DS18B20, a One-Wire Temperature sensor that sense the temperature of the Copper Bar where all my PV strings collapse via Diodes in order to sense the diodes temperature bar, that normally is keept cool via two 40mm micro-fans placed at the ends of the bar, covered by a plastic tunnel in order to optimize the air-flow.
+
+
+# Installation steps (based on CentOS):
+- check and install OS updates (yum upgrade -y)
+- install Apache web server (yum install -y httpd)
+- install MySQL or MariaDB (yum install -y mariadb mariadb-server)
+- install php (yum install -y php-cli php-common php-devel php-mysql)
+- enable web server (systemctl enable httpd && systemctl start httpd)
+- enable MySQL (systemctl enable mariadb && systemctl start mariadb)
+- enable MySQL InnoDB tables outside system datafile
+  - vi /etc/my.cnf
+  - add the following line: innodb_file_per_table=1
+  - save the file and exit
+- pre-configure MySQL in a secure installation (mysql_secure_installation)
+  - remove and disable all demo accounts and database
+  - configure a root password
+  - if you plan to administer remotely MySQL, enable remote root access
+- enable web server through firewall (firewall-cmd --permanent --add-port=80/tcp)
+- enable mysql management through firewall (firewall-cmd --permanent --add-port=3306/tcp)
+- commit firewall config (firewall-cmd --reload)
+- copy the contents of "web_" into webserver root, normally under /var/www/html
