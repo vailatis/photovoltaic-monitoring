@@ -20,7 +20,7 @@ My implementation is divided in two separated objects, since i already have serv
 In this implementation, since i had room, i connected to the Raspberry a DS18B20, a One-Wire Temperature sensor that sense the temperature of the Copper Bar where all my PV strings collapse via Diodes in order to sense the diodes temperature bar, that normally is keept cool via two 40mm micro-fans placed at the ends of the bar, covered by a plastic tunnel in order to optimize the air-flow.
 
 
-# Installation steps (based on CentOS):
+# WebServer Installation steps (based on CentOS):
 - check and install OS updates (yum upgrade -y)
 - install Apache web server (yum install -y httpd)
 - install MySQL or MariaDB (yum install -y mariadb mariadb-server)
@@ -38,4 +38,7 @@ In this implementation, since i had room, i connected to the Raspberry a DS18B20
 - enable web server through firewall (firewall-cmd --permanent --add-port=80/tcp)
 - enable mysql management through firewall (firewall-cmd --permanent --add-port=3306/tcp)
 - commit firewall config (firewall-cmd --reload)
-- copy the contents of "web_" into webserver root, normally under /var/www/html
+- copy the contents of "_web_interface_" folder into webserver root (normally located under /var/www/html or /var/www)
+- copy the content of "_\_scripts_" folder in a location where you normally keep maintenance scripts (for example /usr/local/bin)
+- edit the crontab in order to add the execution of the two provided scripts (there is an example inside the folder)
+- go under "_webroot/_library_" and edit the file "_\_config.php_" in order to provide credentials for MySQL database and OpenWeather
