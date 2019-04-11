@@ -7,12 +7,10 @@
 require("/var/www/_library/_config.php");
 
 // Yahoo Location ID to retreive data for
-$OPENWEATHER_LOCATIONID = "6536515";
-$OPENWEATHER_APIKEY = "614c98b189a337595c077da2706c0371";
+$OPENWEATHER_LOCATIONID = "put here your OpenWeather location ID";
+$OPENWEATHER_APIKEY = "put here your OpenWeather API key code";
 
 // Yahoo API constants and query strings
-//$YAHOO_APIURL = "http://query.yahooapis.com/v1/public/yql?format=json&q=";
-//$YAHOO_QUERY = "select * from weather.forecast where woeid=".$YAHOO_LOCATIONID." and u='c'";
 $OPENWEATHER_APIURL = "http://api.openweathermap.org/data/2.5/weather?id=".$OPENWEATHER_LOCATIONID."&units=metric&lang=it&appid=".$OPENWEATHER_APIKEY;
 
 // Fetch JSON weather data with CURL
