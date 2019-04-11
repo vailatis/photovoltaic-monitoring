@@ -1,0 +1,9 @@
+On a shell prompt issue the command "crontab -e" to edit crontab and insert the following lines:
+
+# minute - hour - day - month - weekday - command
+*/15 * * * * /usr/bin/php /var/www/_scripts/WEATHER_Collect.php
+5 0 * * * /usr/bin/php /var/www/_scripts/MYSQL_StoricizeData.php
+
+These lines will:
+  1^: download weather data every 15 minutes and store into database
+  2^: storicize and consolidate old data every day at 5 minutes past midnight
