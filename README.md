@@ -41,4 +41,7 @@ In this implementation, since i had room, i connected to the Raspberry a DS18B20
 - copy the contents of "_web_interface_" folder into webserver root (normally located under /var/www/html or /var/www)
 - copy the content of "_\_scripts_" folder in a location where you normally keep maintenance scripts (for example /usr/local/bin)
 - edit the crontab in order to add the execution of the two provided scripts (there is an example inside the folder)
+- execute the "_MySQL_CreateDatabase.sql_" script to create databaes, tables, view and procedures
+- create on MySQL the account and give "_GRANT ALL_" trole to schema "_solar_" you just created
 - go under "_webroot/_library_" and edit the file "_\_config.php_" in order to provide credentials for MySQL database and OpenWeather
+- if everythinggone without errors, connecting with a browser to your webserver, should display the Solar website
