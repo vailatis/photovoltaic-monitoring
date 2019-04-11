@@ -3,7 +3,7 @@
 // MYSQL credentials
 $DB_Hostname = "127.0.0.1";
 $DB_Username = "solar";
-$DB_Password = "fiore12!";
+$DB_Password = "password";
 $DB_Schema   = "solar_db";
 //---------------------------------------------------------------------------------------------
 // Configure the default TimeZone for Date/Time functions
