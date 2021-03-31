@@ -19,6 +19,10 @@ My implementation is divided in two separated objects, since i already have serv
 
 In this implementation, since i had room, i connected to the Raspberry a DS18B20, a One-Wire Temperature sensor that sense the temperature of the Copper Bar where all my PV strings collapse via Diodes in order to sense the diodes temperature bar, that normally is keept cool via two 40mm micro-fans placed at the ends of the bar, covered by a plastic tunnel in order to optimize the air-flow.
 
+![Alt text](./example-images/Home-1.png?raw=true "Home-Page first part")
+
+![Alt text](./example-images/Home-2.png?raw=true "Home-Page second part")
+
 
 # WebServer Installation steps (based on CentOS):
 - check and install OS updates (yum upgrade -y)
